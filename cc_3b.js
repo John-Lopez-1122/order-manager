@@ -25,7 +25,7 @@ console.log(inventory)
 
 let orders = [
     ["ID2235", ["prt22332", 1]],
-    ["ID7735", ["hdf13342", 4]]
+    ["ID7735", ["hdf13342", 20000]]
 ]
 
 orders.forEach(item => {
@@ -36,8 +36,18 @@ orders.forEach(item => {
 }
 )
 
-//function processorder(order) {
-//    if (order.SKU == inventory.sku) && (order.qty < inventory.stock)
-//
+function processorder(order) {
+    const sku = order[1][0]
+    const qty = order[1][1]
 
-//}
+    const product = inventory.find(item => item[0] == sku)
+
+    if (product && qty <= product[3]) {
+        product[3] -= qty
+        console.log(`Order amount: ${product[2] * qty}`)
+    } else {
+        console.log(`Order Failed`)
+    }
+}
+
+orders.forEach(order => processorder(order))
