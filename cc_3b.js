@@ -28,9 +28,16 @@ let orders = [
     ["ID7735", ["hdf13342", 4]]
 ]
 
-function processOrder(order) {
-
-
+orders.forEach(item => {
+    const orderID = item[0]
+    const SKU = item[1][0]
+    const qty = item[1][1]
+    console.log(`${orderID} | ${SKU} | ${qty}`)
 }
+)
 
+//function processorder(order) {
+//    if (order.SKU == inventory.sku) && (order.qty < inventory.stock)
+//
 
+//}
