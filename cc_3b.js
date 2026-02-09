@@ -51,3 +51,20 @@ function processorder(order) {
 }
 
 orders.forEach(order => processorder(order))
+
+
+
+//forgot last step
+
+const totalInvValue = inventory.reduce((sum, item) => {
+    return sum+item[2] * item[3]}, 0)
+
+const lowInvStock = inventory.filter(item => item[3] <= 100)
+
+const invPriceList = inventory.map(item => {
+    return `${item[0]} - $${item[2]}`
+})
+
+console.log(`$${totalInvValue}`)
+console.log(lowInvStock)
+console.log(`${invPriceList[0]} | ${invPriceList[1]} | ${invPriceList[2]} | ${invPriceList[3]}`)
