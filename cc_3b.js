@@ -5,10 +5,16 @@ let inventory = [       //array created
     ["gfe67452", "Monitor", 674.99, 74]
 ] 
 
-console.log(`${inventory[0][0]} | ${inventory[0][1]} | $${inventory[0][2]} | Stock:${inventory[0][3]}`)
-console.log(`${inventory[1][0]} | ${inventory[1][1]} | $${inventory[1][2]} | Stock:${inventory[1][3]}`)
-console.log(`${inventory[2][0]} | ${inventory[2][1]} | $${inventory[2][2]} | Stock:${inventory[2][3]}`)
-console.log(`${inventory[3][0]} | ${inventory[3][1]} | $${inventory[3][2]} | Stock:${inventory[3][3]}`)
+inventory.forEach(item => {
+    const sku = item[0]
+    const name = item[1]
+    const price = item[2]
+    const stock = item[3]
+
+    console.log(`${sku} | ${name} | $${price} | Stock:${stock}`)
+}
+)
+
 
 inventory.push(["ret55343", "Keyboard", 54.99, 102]) //push, pop, update
 inventory.pop()
@@ -21,5 +27,10 @@ let orders = [
     ["ID2235", ["prt22332", 1]],
     ["ID7735", ["hdf13342", 4]]
 ]
+
+function processOrder(order) {
+
+
+}
 
 
