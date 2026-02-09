@@ -1,0 +1,1 @@
+I wont lie, this one killed me. I had to learn alot in not alot of time. Did I learn from it? yes. Did I do this to myself? yes. Was this still far harder then the "recommended" time suggested? absolutely. took i think an hour or 2 idk i lost count.  Please feel free to message me at any time using my email: johnplopez123@gmail.com or through Github. Thank you!
